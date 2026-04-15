@@ -122,12 +122,14 @@ body {
   pointer-events: none;
   background: #fff;
   clip-path: inset(0 0 100% 0);
-  transition: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
 }
 
 #contact-overlay.is-open {
   pointer-events: auto;
   clip-path: inset(0 0 0 0);
+  opacity: 1;
 }
 
 #contact-panel {
@@ -141,12 +143,12 @@ body {
   padding: clamp(10px, 1.5vw, 14px) 0 clamp(20px, 3vh, 28px) 0;
   color: #111;
   font-family: 'Walter Neue', sans-serif;
-  transform: translateY(8px);
-  transition: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
 }
 
 #contact-overlay.is-open #contact-panel {
-  transform: translateY(0);
+  opacity: 1;
 }
 
 .contact-accordion {
@@ -171,7 +173,13 @@ body {
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   line-height: 1.1;
   padding: 2px 0;
+  opacity: 0;
+  transition: opacity 170ms ease;
   cursor: pointer;
+}
+
+#contact-overlay.is-open .contact-section-toggle {
+  opacity: 1;
 }
 
 .contact-section.is-open .contact-section-toggle {
