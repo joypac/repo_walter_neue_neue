@@ -342,7 +342,7 @@ var vidObs = new IntersectionObserver(function(entries) {
 }, { threshold: [0, 0.15], rootMargin: '50% 0px' });
 
 function buildMosaicLayout(container) {
-  var COLS = 2;
+  var COLS = 3;
   var displayedMedia = projects.map(function(p) { return shuffle(p.media); });
   var layout = buildGrid(projects, displayedMedia, COLS);
   var grid = layout.grid, ROWS = layout.rows;
